@@ -13,8 +13,7 @@ public class SimonSays : ISimonSays
     SayModel? currSay = SaysList.SingleOrDefault(say => say.Id.Equals(inputSay.Id));
     if (currSay == null)
     {
-      SayModel noExitsSay = new SayModel(0, 0);
-      noExitsSay.Says.Clear(); // Count checking so NoContent() will be send
+      SayModel noExitsSay = new SayModel();// Count checking so NoContent() will be send
       return noExitsSay;
     }
 
@@ -23,8 +22,7 @@ public class SimonSays : ISimonSays
     {
       SaysList.Remove(currSay);
 
-      SayModel failSay = new SayModel(0, 0);
-      failSay.Says.Clear(); // Count checking so NoContent() will be send
+      SayModel failSay = new SayModel(); // Count checking so NoContent() will be send
       return failSay;
     }
 
