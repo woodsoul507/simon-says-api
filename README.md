@@ -3,7 +3,10 @@
 ## Description
 Classic Simon Says game. Get an array of numbers where each number is a Simon's instruction. Post exactly the same array to get the array once again with a new number/instruction into it. Repeat the process until you fail repeating the array of numbers/instructions.
 
-## Usage <a name = "usage"></a>
+[Deployed Project](https://simonsaysapi2022.azurewebsites.net/api/v1/SimonSays)
+[SwaggerDoc](https://simonsaysapi2022.azurewebsites.net/swagger/index.html)
+
+## Usage
 Get the initial array.
 The query param interactWaitMinutes indicate how many time the Simon game will be alive. If your current game does not get any interaction within the interactWaitMinutes then it will be removed.
 
@@ -11,18 +14,18 @@ Also maxValue query param means the higher a number can be in the array. maxValu
 
 ```
 Default values without params interactWaitMinutes = 5 and maxValue = 4
-GET /SimonSays
+GET https://simonsaysapi2022.azurewebsites.net/api/v1/SimonSays
 
 or
 
 Example of custom interactWaitMinutes and maxValue query parameter
-GET /SimonSays?interactWaitMinutes=2&maxValue=6
+GET https://simonsaysapi2022.azurewebsites.net/api/v1/SimonSays?interactWaitMinutes=2&maxValue=6
 ```
 
 Post your response.
 If your response has the same values in the same order than the previous Simon Says array you will get the array once again with a new number added at the tail.
 ```
-POST /SimonSays
+POST https://simonsaysapi2022.azurewebsites.net/api/v1/SimonSays
 {
     "id": "811f2c97-1bdb-4be2-b610-1920a112e2e0-258333523301",
     "says": [
