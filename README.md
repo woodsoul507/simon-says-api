@@ -4,6 +4,7 @@
 Classic Simon Says game. Get an array of numbers where each number is a Simon's instruction. Post exactly the same array to get the array once again with a new number/instruction into it. Repeat the process until you fail repeating the array of numbers/instructions.
 
 [Deployed Project](https://simonsaysapi2022.azurewebsites.net/api/v1/SimonSays)
+
 [SwaggerDoc](https://simonsaysapi2022.azurewebsites.net/swagger/index.html)
 
 ## Usage
